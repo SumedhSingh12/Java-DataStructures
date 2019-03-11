@@ -3,6 +3,7 @@ package datastructures.sorting;
 import java.util.Arrays;
 
 public class SelectionSort {
+	
 	public int[] sorter(int[] a) {
 		for(int i=0; i<a.length; i++) {
 			int minIndex = findMinIndex(a, i);
