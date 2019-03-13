@@ -36,13 +36,15 @@ public class SinglyLinkedList {
 		Node node = this.head;
 		
 		int i = 0;
-		while(node.next != null && i++ < pos) {
+		while(node.next.next != null && i++ < pos) {
 			node = node.next;
 		}
 		if(node.next == null)
 			addTail(node, value);
 		else {
 			Node newNode = new Node(value, node.next);
+			node.next = newNode;
+			this.size++;
 			
 		}
 		
